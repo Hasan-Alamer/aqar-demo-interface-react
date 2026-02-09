@@ -19,11 +19,12 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-700 flex items-center">
-              <span className="text-blue-700">watanaqar</span>
-              <span className="text-orange-500">.</span>
-            </div>
-          </div>
+  <div className="text-2xl font-bold text-emerald-700 flex items-center">
+    <span>watanaqar</span>
+    <span className="text-orange-500">.</span>
+  </div>
+</div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -34,7 +35,7 @@ export const Navbar: React.FC = () => {
                 onMouseEnter={() => setActiveMenu(item.label)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
-                <button className="flex items-center px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <button className="flex items-center px-4 py-2 text-gray-700 hover:text-emerald-600 font-medium transition-colors">
                   {item.label}
                   {item.submenu && (
                     <ChevronDown className="ml-1 h-4 w-4" />

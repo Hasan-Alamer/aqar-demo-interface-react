@@ -26,53 +26,52 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      
       {/* Hero Section */}
-      <section className="bg-gradient-to-l from-blue-700 to-blue-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              ابحث عن <span className="text-yellow-300">عقار أحلامك</span> في السعودية
-            </h1>
-            <p className="text-xl mb-12 max-w-3xl mx-auto">
-              منصة العقار الرائدة في المملكة العربية السعودية مع أكثر من 50,000 عقار
-            </p>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-3xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="ابحث عن عقار، موقع، رقم إعلان..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-8 py-5 pr-12 rounded-2xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-500/30 shadow-2xl"
-                />
-                <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <div className="bg-white shadow-lg py-8 -mt-6 relative z-10 rounded-t-3xl">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex items-center justify-center gap-6 p-6 hover:bg-gray-50 rounded-2xl transition-colors">
-                <div className="bg-blue-100 p-4 rounded-xl">
-                  <stat.icon className="w-8 h-8 text-blue-600" />
-                </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-gray-600 text-lg">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+<section className="bg-gradient-to-l from-emerald-700 to-green-800 text-white py-16">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        ابحث عن <span className="text-yellow-300">عقار أحلامك</span> في السعودية
+      </h1>
+      <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">
+        منصة العقار الرائدة في المملكة العربية السعودية مع أكثر من 50,000 عقار
+      </p>
+      
+      {/* Search Bar */}
+      <div className="relative max-w-3xl mx-auto">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="ابحث عن عقار، موقع، رقم إعلان..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-8 py-5 pr-12 rounded-2xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-emerald-500/30 shadow-2xl"
+          />
+          <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+  {/* Stats Section */}
+<div className="bg-white shadow-lg py-8 -mt-6 relative z-10 rounded-t-3xl">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex items-center justify-center gap-6 p-6 hover:bg-emerald-50 rounded-2xl transition-colors">
+          <div className="bg-emerald-100 p-4 rounded-xl">
+            <stat.icon className="w-8 h-8 text-emerald-600" />
+          </div>
+          <div className="text-right">
+            <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+            <div className="text-gray-600 text-lg">{stat.label}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
