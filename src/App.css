@@ -1,0 +1,35 @@
+@layer components {
+  /* High-visibility card for the grid */
+  .selection-card {
+    @apply flex items-center justify-center p-5 bg-white 
+           border-2 border-slate-200 rounded-2xl cursor-pointer
+           transition-all duration-200 text-slate-600
+           hover:border-[#149d81] hover:bg-emerald-50 active:scale-95;
+    /* Added a slightly larger font for better readability */
+    font-size: 1.125rem; 
+    font-weight: 600;
+  }
+
+  /* Active state with the specific teal from your image */
+  .selection-card-active {
+    @apply border-[#149d81] bg-[#149d81] text-white 
+           shadow-lg shadow-emerald-100 ring-4 ring-emerald-50;
+  }
+
+  /* Primary Action Button (e.g., "Search") */
+  .btn-primary {
+    @apply bg-[#149d81] text-white px-8 py-4 rounded-2xl 
+           font-bold text-xl transition-all duration-200 
+           shadow-lg shadow-emerald-200 hover:bg-[#0f7d67] hover:-translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  /* Modern teal scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#149d81] rounded-full border-4 border-solid border-[#f8fafc];
+  }
+}
